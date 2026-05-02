@@ -30,6 +30,7 @@ This repository contains a collection of ongoing research experiments focused on
 - Evaluation using classification metrics (accuracy, F1, etc.)
 
 📁 [learning_Invariances_MNIST.ipynb](./learning_Invariances_MNIST.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/learning_Invariances_MNIST.ipynb)
 
 ---
 
@@ -42,6 +43,7 @@ This repository contains a collection of ongoing research experiments focused on
 - Early exploration toward **medical image alignment with representation learning**
 
 📁 [MedSigLip_+_VoxelMorph.ipynb](./MedSigLip_+_VoxelMorph.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/MedSigLip_+_VoxelMorph.ipynb)
 
 ---
 
