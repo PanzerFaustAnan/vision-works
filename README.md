@@ -15,6 +15,7 @@ This repository contains a collection of ongoing research experiments focused on
 - Experiments with long training schedules to stabilize learning
 
 📁 [CVAE_KLD_Optimization.ipynb](./CVAE_KLD_Optimization.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/CVAE_KLD_Optimization.ipynb)
 
 ---
 
