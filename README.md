@@ -14,7 +14,7 @@ This repository contains a collection of ongoing research experiments focused on
 - Custom loss with **β-weighted KL divergence**
 - Experiments with long training schedules to stabilize learning
 
-📁 `[CVAE_KLD_Optimization.ipynb](./CVAE_KLD_Optimization.ipynb)`
+📁 [CVAE_KLD_Optimization.ipynb](./CVAE_KLD_Optimization.ipynb)
 
 ---
 
@@ -28,7 +28,7 @@ This repository contains a collection of ongoing research experiments focused on
 - Custom CNN architecture with controlled data sampling
 - Evaluation using classification metrics (accuracy, F1, etc.)
 
-📁 `[learning_Invariances_MNIST.ipynb](./learning_Invariances_MNIST.ipynb)`
+📁 [learning_Invariances_MNIST.ipynb](./learning_Invariances_MNIST.ipynb)
 
 ---
 
@@ -40,7 +40,7 @@ This repository contains a collection of ongoing research experiments focused on
 - Custom registration losses and displacement analysis
 - Early exploration toward **medical image alignment with representation learning**
 
-📁 `[MedSigLip_+_VoxelMorph.ipynb](./MedSigLip_+_VoxelMorph.ipynb)`
+📁 [MedSigLip_+_VoxelMorph.ipynb](./MedSigLip_+_VoxelMorph.ipynb)
 
 ---
 
