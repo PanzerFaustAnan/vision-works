@@ -1,68 +1,40 @@
-# Generative Modeling & Representation Learning Experiments
+# Medical Image Registration & Segmentation — Research Notebooks
 
-This repository contains a collection of ongoing research experiments focused on **representation learning, generative modeling, and visual understanding**. The work primarily explores Variational Autoencoders (VAEs), Conditional VAEs (CVAEs), and their extensions toward invariant learning and multimodal vision systems.
+Research notebooks from my work as a Research Assistant (Feb 2025–Present) under **Dr. Tonmoy Hossain Dihan**, Postdoctoral Research Fellow, Harvard Medical School (remote collaboration). Organized to mirror the "Research Experience" section of my CV — each notebook here corresponds to a specific sub-project described there.
 
-> Note: These are **research-in-progress notebooks** and do not represent final results.
-
----
-
-## Research Areas
-
-### 1. CVAE Optimization (Posterior Collapse Mitigation)
-- Implementation of Conditional Variational Autoencoder (CVAE)
-- Focus on improving latent space utilization
-- Custom loss with **β-weighted KL divergence**
-- Experiments with long training schedules to stabilize learning
-
-📁 [CVAE_KLD_Optimization.ipynb](./CVAE_KLD_Optimization.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/CVAE_KLD_Optimization.ipynb)
+> These are research-in-progress notebooks, not polished final deliverables.
 
 ---
 
-### 2. Learning Invariances in Visual Representations
-- Study of how neural networks learn invariances under:
-  - Rotation  
-  - Translation  
-  - Scaling  
-  - Shearing  
-- Conducted on **MNIST dataset**
-- Custom CNN architecture with controlled data sampling
-- Evaluation using classification metrics (accuracy, F1, etc.)
+## 1. Generative Modeling & Vision–Language Models for Image Registration
 
-📁 [learning_Invariances_MNIST.ipynb](./learning_Invariances_MNIST.ipynb)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/learning_Invariances_MNIST.ipynb)
+Early pipeline validation for combining SigLIP-based vision encoders with VoxelMorph-style deformable registration — custom registration losses and displacement-field analysis, tested on paired-image data as a fast testbed before scaling to volumetric MRI. Uses `google/medsiglip-448` as the vision encoder.
 
----
-
-### 3. MedSigLIP + Deformable Image Registration
-- Experimental integration of:
-  - **SigLIP-based vision encoders**
-  - **VoxelMorph-style deformable registration**
-- Pairwise image alignment using learned transformations
-- Custom registration losses and displacement analysis
-- Early exploration toward **medical image alignment with representation learning**
-
-📁 [MedSigLip_+_VoxelMorph.ipynb](./MedSigLip_+_VoxelMorph.ipynb)
+📁 [`MedSigLip_+_VoxelMorph.ipynb`](./MedSigLip_+_VoxelMorph.ipynb)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/MedSigLip_+_VoxelMorph.ipynb)
 
 ---
 
+## 2. SynthSeg Pipeline Dissection & Quantitative Evaluation
+
+Dissected each stage of the SynthSeg (Billot et al.) synthetic image generation pipeline from first principles using NumPy/SciPy — reparameterization trick, diffeomorphic elastic deformation via scaling-and-squaring — rather than treating the released code as a black box.
+
+📁 [`SynthSeg_step_by_step_v3.ipynb`](./SynthSeg_step_by_step_v3.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/SynthSeg_step_by_step_v3.ipynb)
+
+Quantitative comparison of SynthSeg (v1.0, v2.0) against FastSurfer on the Mindboggle-101 dataset (NKI-TRT-20 cohort, 20 subjects, manual DKT+aseg ground truth) — Dice, HD95, ASSD, and qualitative overlays.
+
+📁 [`SynthSeg_v1_vs_v2_vs_FastSurfer_comparison_v2.ipynb`](./SynthSeg_v1_vs_v2_vs_FastSurfer_comparison_v2.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PanzerFaustAnan/vision-works/blob/main/SynthSeg_v1_vs_v2_vs_FastSurfer_comparison_v2.ipynb)
+
+---
+
 ## Tech Stack
-- Python
-- PyTorch
-- Hugging Face Transformers (SigLIP)
-- Torchvision
-- NumPy, Matplotlib
-- Scikit-learn
+
+Python, PyTorch, TensorFlow/Keras, NumPy/SciPy, HuggingFace Transformers, FreeSurfer, SynthSeg, VoxelMorph, Google Colab (GPU)
 
 ---
 
 ## Notes
 
-These notebooks serve as **prototypes and experimental logs**.  
-Future work includes:
-- Extending CVAE applications
-- Deeper study of covariance-aware representations
-- Integration with Vision-Language Models (e.g., CLIP, SAM-style systems)
-
----
+Next planned addition: cross-modality generalization evaluation (T1 vs. T2, HCP S1200), extending the SynthSeg-vs-FastSurfer comparison beyond T1-weighted MRI.
