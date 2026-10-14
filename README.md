@@ -1,6 +1,6 @@
 # Medical Image Registration & Segmentation — Research Notebooks
 
-Research notebooks from my work as a Research Assistant (Feb 2025–Present) under **Dr. Tonmoy Hossain Dihan**, Postdoctoral Research Fellow, Harvard Medical School (remote collaboration). Organized to mirror the "Research Experience" section of my CV — each notebook here corresponds to a specific sub-project described there.
+Research notebooks from my work as a Research Assistant. Organized to mirror the "Research Experience" section of my CV. Each notebook here corresponds to a specific sub-project described there.
 
 > These are research-in-progress notebooks, not polished final deliverables.
 
